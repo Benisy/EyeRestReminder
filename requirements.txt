@@ -1,0 +1,5 @@
+pystray
+Pillow
+plyer
+playsound==1.2.2
+pyinstaller
