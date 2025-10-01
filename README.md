@@ -2,7 +2,7 @@
 
 ![icon](icon.png "EyeRestReminder")
 
-A Windows application that reminds you to take breaks to rest your eyes. Forget about strain and fatigue—EyeRestReminder tracks your activity and tactfully (or not so tactfully) tells you when it's time to take a break.
+An application that reminds you to take breaks to rest your eyes. Forget about strain and fatigue EyeRestReminder tracks your activity and tactfully (or not so tactfully) tells you when it's time to take a break.
 
 The application runs in the background, doesn't interfere with your work, and has flexible settings accessible right from the tray icon.
 
@@ -79,7 +79,7 @@ To run the application, use `uv run`.
 ### Audio Notifications
 
 The fun part! You can fully customize the sounds.
-Just record your own phrases (funny, sarcastic, harsh in the style of GLaDOS—anything goes!) and place the `.mp3` files in the `sounds` folder. The application will randomly select one for each notification.
+Just record your own phrases (funny, sarcastic, harsh in the style of GLaDOS anything goes!) and place the `.mp3` files in the `sounds` folder. The application will randomly select one for each notification.
 
 ### Basic Settings
 
