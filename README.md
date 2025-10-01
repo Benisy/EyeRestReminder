@@ -1,5 +1,7 @@
 # EyeRestReminder
 
+![icon](icon.png "EyeRestReminder")
+
 A Windows application that reminds you to take breaks to rest your eyes. Forget about strain and fatigue—EyeRestReminder tracks your activity and tactfully (or not so tactfully) tells you when it's time to take a break.
 
 The application runs in the background, doesn't interfere with your work, and has flexible settings accessible right from the tray icon.
