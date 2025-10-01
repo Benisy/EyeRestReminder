@@ -1,124 +1,124 @@
 # EyeRestReminder
 
-Приложение для Windows, которое напоминает вам о необходимости делать перерывы для отдыха глаз. Забудьте о напряжении и усталости — EyeRestReminder следит за вашей активностью и тактично (или не очень) сообщает, когда пора отвлечься.
+A Windows application that reminds you to take breaks to rest your eyes. Forget about strain and fatigue—EyeRestReminder tracks your activity and tactfully (or not so tactfully) tells you when it's time to take a break.
 
-Приложение работает в фоновом режиме, не мешает работе и обладает гибкими настройками прямо из иконки в трее.
+The application runs in the background, doesn't interfere with your work, and has flexible settings accessible right from the tray icon.
 
-## ⚙️ Основные возможности
+## ⚙️ Key Features
 
-*   ✅ **Таймер**: Отслеживает только время активной работы за компьютером.
-*   ✅ **Гибкая настройка**: Интервал работы и порог бездействия легко настраиваются через меню в трее.
-*   ✅ **Сохранение настроек**: Ваши предпочтения сохраняются между перезапусками.
-*   ✅ **Автозапуск Windows**: Возможность включить/выключить автозапуск одним кликом.
-*   ✅ **Забавные звуковые уведомления**: Воспроизводит случайные аудио-фразы из папки `sounds`. Добавьте свои!
-*   ✅ **Ненавязчивость**: Работает в системном трее, отображая оставшееся до отдыха время в подсказке.
+*   ✅ **Timer**: Tracks only your active computer usage time.
+*   ✅ **Flexible Settings**: Work interval and idle threshold are easily configurable through the tray menu.
+*   ✅ **Settings Persistence**: Your preferences are saved between restarts.
+*   ✅ **Windows Autostart**: Enable or disable autostart with a single click.
+*   ✅ **Fun Audio Notifications**: Plays random audio clips from the `sounds` folder. Add your own!
+*   ✅ **Unobtrusive**: Runs in the system tray, displaying the remaining time until your next break in a tooltip.
 
-## 🚀 Установка
+## 🚀 Installation
 
-Для установки и запуска проекта используется менеджер пакетов [UV](https://github.com/astral-sh/uv).
+This project uses the [UV](https://github.com/astral-sh/uv) package manager for installation and running.
 
-### 1. Подготовка
+### 1. Preparation
 
-*   Убедитесь, что у вас установлен **Python 3.8+**.
-*   Установите **UV**:
+*   Ensure you have **Python 3.8+** installed.
+*   Install **UV**:
     ```shell
     # Windows (Powershell)
     irm https://astral.sh/uv/install.ps1 | iex
     ```
-*   Склонируйте репозиторий:
+*   Clone the repository:
     ```shell
     git clone https://github.com/Benisy/EyeRestReminder.git
-    cd ваш-репозиторий
+    cd your-repository
     ```
 
-### 2. Создание окружения и установка зависимостей
+### 2. Create environment and install dependencies
 
-1.  **Создайте виртуальное окружение:**
+1.  **Create a virtual environment:**
     ```shell
     uv venv
     ```
 
-2.  **Создайте файл `requirements.txt`** со следующим содержимым:
+2.  **Create a `requirements.txt` file** with the following content:
     ```txt
     pystray
     Pillow
     plyer
     playsound==1.2.2
     ```
-    > **Важно**: `playsound` версии `1.3.0` может вызывать проблемы на Windows. Рекомендуется использовать `1.2.2`.
+    > **Important**: `playsound` version `1.3.0` can cause issues on Windows. It is recommended to use version `1.2.2`.
 
-3.  **Установите зависимости:**
+3.  **Install the dependencies:**
     ```shell
     uv pip install -r requirements.txt
     ```
 
-### 3. Подготовка ресурсов
+### 3. Prepare Resources
 
-1.  Поместите иконку приложения `icon.ico` в корневую папку проекта.
-2.  Создайте папку `sounds` в корне проекта.
-3.  Поместите в папку `sounds` ваши звуковые файлы в формате `.mp3`.
+1.  Place the application icon `icon.ico` in the root folder of the project.
+2.  Create a `sounds` folder in the project root.
+3.  Place your `.mp3` sound files into the `sounds` folder.
 
-## ▶️ Использование
+## ▶️ Usage
 
-Для запуска приложения используйте `uv run`.
+To run the application, use `uv run`.
 
-*   **Запуск с окном консоли (для отладки):**
+*   **Run with a console window (for debugging):**
     ```shell
     uv run python main.py
     ```
-*   **Запуск в фоновом режиме (без консоли):**
+*   **Run in the background (without a console):**
     ```shell
     uv run pythonw main.py
     ```
-    Приложение появится в системном трее. Щелкните правой кнопкой мыши по иконке для доступа к настройкам.
+    The application will appear in the system tray. Right-click the icon to access the settings.
 
-## 🔧 Кастомизация
+## 🔧 Customization
 
-### Звуковые уведомления
+### Audio Notifications
 
-Самая веселая часть! Вы можете полностью кастомизировать звуки.
-Просто запишите свои собственные фразы (забавные, саркастичные, грубые в стиле GLaDOS — всё, что угодно!) и положите `.mp3` файлы в папку `sounds`. Приложение будет случайным образом выбирать один из них для каждого уведомления.
+The fun part! You can fully customize the sounds.
+Just record your own phrases (funny, sarcastic, harsh in the style of GLaDOS—anything goes!) and place the `.mp3` files in the `sounds` folder. The application will randomly select one for each notification.
 
-### Основные настройки
+### Basic Settings
 
-Некоторые базовые параметры, такие как `APP_NAME` или тексты уведомлений, можно изменить в верхней части файла `main.py`.
+Some basic parameters, such as `APP_NAME` or notification texts, can be changed at the top of the `main.py` file.
 
-## 📦 Сборка в `.exe` файл
+## 📦 Building into an .exe file
 
-Вы можете скомпилировать скрипт в один исполняемый `.exe` файл с помощью **PyInstaller**.
+You can compile the script into a single executable `.exe` file using **PyInstaller**.
 
-1.  **Установите PyInstaller:**
+1.  **Install PyInstaller:**
     ```shell
     uv pip install pyinstaller
     ```
 
-2.  **Выполните сборку:**
-    Запустите команду ниже из корневой папки проекта. Она соберет все необходимые ресурсы в один файл.
+2.  **Run the build:**
+    Run the command below from the project's root folder. It will bundle all the necessary resources into a single file.
 
     ```shell
     pyinstaller --onefile --windowed --hidden-import plyer.platforms.win.notification --icon="icon.ico" --add-data "icon.ico;." --add-data "sounds;sounds" --name EyeRestReminder main.py
     ```
-    **Разбор команды:**
-    *   `--onefile`: Создает один `.exe` файл.
-    *   `--windowed`: Запускает приложение без окна консоли.
-    *   `--icon="icon.ico"`: Устанавливает иконку для `.exe` файла.
-    *   `--add-data="sounds;sounds"`: Включает папку `sounds` в сборку.
-    *   `--add-data="icon.ico;."`: Включает файл иконки для использования в уведомлениях.
-    *   `--name`: Имя для приложения.
+    **Command Breakdown:**
+    *   `--onefile`: Creates a single `.exe` file.
+    *   `--windowed`: Runs the application without a console window.
+    *   `--icon="icon.ico"`: Sets the icon for the `.exe` file.
+    *   `--add-data="sounds;sounds"`: Includes the `sounds` folder in the build.
+    *   `--add-data="icon.ico;."`: Includes the icon file for use in notifications.
+    *   `--name`: The name for the application.
 
-3.  Готовый `.exe` файл будет находиться в папке `dist`.
+3.  The finished `.exe` file will be located in the `dist` folder.
 
 
-## 📄 Лицензия
+## 📄 License
 
-Этот проект имеет двойное лицензирование для кода и для медиа-ресурсов.
+This project is dual-licensed for its code and media assets.
 
-### Код
+### Code
 
-**Код** этого проекта (`main.py` и сопутствующие скрипты) распространяется под **лицензией MIT**. Вы можете свободно использовать, изменять и распространять его в соответствии с условиями, изложенными в файле [LICENSE](LICENSE).
+**The code** for this project (`main.py` and related scripts) is distributed under the **MIT License**. You are free to use, modify, and distribute it in accordance with the terms set forth in the [LICENSE](LICENSE) file.
 
-### Аудио-ресурсы
+### Audio Assets
 
-**Аудио-ресурсы** в папке `sounds` были созданы с помощью сервиса [ElevenLabs](https://elevenlabs.io/) и регулируются их **Условиями использования (Terms of Service)**. Распространение и использование этих файлов должно соответствовать политике ElevenLabs, актуальной для тарифного плана, на котором они были сгенерированы.
+**The audio assets** in the `sounds` folder were created using the [ElevenLabs](https://elevenlabs.io/) service and are governed by their **Terms of Service**. The distribution and use of these files must comply with the ElevenLabs policy applicable to the subscription plan on which they were generated.
 
 ---
